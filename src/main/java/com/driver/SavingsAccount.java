@@ -26,13 +26,13 @@ public class SavingsAccount extends BankAccount{
 
     public double getSimpleInterest(int years){
         // Return the final amount considering that bank gives simple interest on current amount
-        return (getBalance()*this.rate*years)/100;
+        return getBalance()*(1+(this.rate*years)/100);
     }
 
     public double getCompoundInterest(int N, int years){
         // Return the final amount considering that bank gives compound interest on current amount given times per year
         double P = getBalance();
-        double rByn = (1 + (this.rate/N));
+        double rByn = (1 + (this.rate/100*N));
         double nxt = N*years;
         return P*(Math.pow(rByn,nxt));
     }

@@ -9,5 +9,7 @@ public class Main {
             System.out.println(e.getMessage());
         }
         System.out.println(s1.getBalance());
+        System.out.println(s1.getCompoundInterest(2,2));
+        System.out.println(s1.getSimpleInterest(2));
     }
 }
