@@ -49,7 +49,6 @@ public class BankAccount {
         if(Math.abs(getBalance()-amount) < getMinBalance()){
             throw new Exception("Insufficient Balance");
         }else {
-            System.out.println(amount+" withdrawn successfully");
             this.balance -= amount;
         }
     }
